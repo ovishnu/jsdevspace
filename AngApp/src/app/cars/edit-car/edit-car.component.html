@@ -1,0 +1,48 @@
+<mdb-card>
+  <mdb-card-header class="info-color white-text text-center py-4">
+    <h5>
+      <strong>Edit Car</strong>
+    </h5>
+  </mdb-card-header>
+  <mdb-card-body class="px-lg-5 pt-0">   
+  
+    <form  [formGroup]="editForm" (ngSubmit)="onSubmit()" class="text-center" style="color: #757575;">
+      <div class="form-row">
+          <div class="col">          
+              <div class="md-form">
+                <input formControlName="image" type="text" id="materialRegisterFormfullName" class="form-control" mdbInputDirective>
+                <label for="materialRegisterFormfullName">Image</label>
+              </div>
+            </div>
+        <div class="col">          
+          <div class="md-form">
+            <input formControlName="name" type="text" id="materialRegisterFormfullName" class="form-control" mdbInputDirective>
+            <label for="materialRegisterFormfullName">Car Name</label>
+          </div>
+        </div>
+        <div class="col">         
+          <div class="md-form">
+            <input formControlName="year" type="text" id="materialRegisterFormcontact" class="form-control" mdbInputDirective>
+            <label for="materialRegisterFormcontact">Year</label>
+          </div>
+        </div>
+      </div>     
+      <div class="md-form mt-0">
+        <input formControlName="model" type="text" id="materialRegisterFormemail" class="form-control" mdbInputDirective>
+        <label for="materialRegisterFormemail">Model</label>
+      </div>      
+       <div class="md-form">
+          <input formControlName="number" type="text" id="materialRegisterFormuserName" class="form-control"  mdbInputDirective>             
+          <label for="materialRegisterFormuserName">Number</label>          
+        </div>               
+      <button mdbBtn color="info" outline="true" rounded="true" block="true" class="my-4 waves-effect z-depth-0" mdbWavesEffect
+        type="submit">Update</button>       
+    </form>     
+  </mdb-card-body>  
+</mdb-card>
+
+
+
+
+
+

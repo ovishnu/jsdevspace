@@ -1,0 +1,41 @@
+<mdb-card>
+    <mdb-card-header class="info-color white-text text-center py-4">
+      <h5>
+        <strong>Sign up</strong>
+      </h5>
+    </mdb-card-header>   
+    <mdb-card-body class="px-lg-5 pt-0">      
+      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="text-center" style="color: #757575;">  
+        <div class="form-row">
+          <div class="col">           
+            <div class="md-form">
+              <input formControlName="fullName" type="text" id="materialRegisterFormFirstName" class="form-control" mdbInputDirective>
+              <label for="materialRegisterFormfullName">Full name</label>
+            </div>
+          </div>
+          <div class="col">           
+            <div class="md-form">
+              <input formControlName="contact" type="number" id="materialRegisterFormcontact" class="form-control" mdbInputDirective>
+              <label for="materialRegisterFormcontact">Contact</label>
+            </div>
+          </div>
+        </div>      
+        <div class="md-form mt-0">
+          <input formControlName="email" type="email" id="materialRegisterFormemail" class="form-control" mdbInputDirective>
+          <label for="materialRegisterFormemail">E-mail</label>          
+        </div>        
+         <div class="md-form">
+            <input formControlName="userName" type="text" id="materialRegisterFormuserName" class="form-control" aria-describedby="materialRegisterFormuserNameHelpBlock"
+              mdbInputDirective>
+            <label for="materialRegisterFormuserName">userName</label>            
+          </div>       
+        <div class="md-form">
+          <input formControlName="password" type="password" id="materialRegisterFormpassword" class="form-control" aria-describedby="materialRegisterFormpasswordHelpBlock"
+            mdbInputDirective>
+          <label for="materialRegisterFormpassword">Password</label>         
+        </div>            
+        <button mdbBtn color="info" outline="true" rounded="true" block="true" class="my-4 waves-effect z-depth-0" mdbWavesEffect
+          type="submit">Sign Up</button>    
+      </form>    
+    </mdb-card-body>  
+  </mdb-card>

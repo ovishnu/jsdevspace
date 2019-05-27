@@ -1,0 +1,27 @@
+
+<app-navigation></app-navigation>
+<div class="pull-right">
+  <!-- <a class="navbar-brand" target="_blank" href="https://www.npmjs.com/package/primeng-advanced-growl">
+      <img src="../assets/images/npm.png" class="nav-image" style="margin-top: 8px">
+  </a>
+  <a class="navbar-brand" target="_blank" href="https://github.com/kreuzerk/primeNG-advanced-growl">
+      <img src="../assets/images/github.png" class="nav-image">
+  </a> -->
+</div>
+<main [ngClass]="{'py-0 px-0 my-0 mx-0': specialPage}"  class="mx-lg-5" >    
+  <div class="mt-5">
+    <router-outlet></router-outlet>
+  </div>
+
+  <adv-growl [life]="lifeTime"
+               [messageSpots]="messageSpots"
+               [freezeMessagesOnHover]="freezeMessagesOnHover"
+               [pauseOnlyHoveredMessage]="pauseOnlyHoveredMessage"
+               (onClick)="logMessage($event)"
+               (onClose)="logClose($event)"
+               (onMessagesChanges)="onMessages($event)">
+    </adv-growl>
+
+</main>
+
+<app-footer></app-footer>

@@ -1,0 +1,30 @@
+<table class="table"> 
+  <thead class="mdb-color darken-3">
+      <tr class="text-white">
+          <th>#</th>
+          <th>Car Name</th>
+          <th>Image</th>
+          <th>Model</th>
+          <th>Year</th>
+          <th>Number</th>         
+          <th>Action</th>          
+      </tr>
+  </thead> 
+  <tbody>
+    <tr *ngFor="let car of cars">      
+      <td class="hidden">{{car.id}}</td>      
+      <td>{{car.name}}</td>
+      <td>{{car.image}}</td>
+      <td>{{car.model}}</td>
+      <td>{{car.year}}</td>
+      <td>{{car.number}}</td>     
+      <td>
+        <a class="btn btn-primary btn-sm" data-toggle="modal"  mdbWavesEffect (click)="editCar(car)" data-target="#editCarModal"><i class="fa fa-pencil"></i></a>
+      
+      
+        <a class="btn btn-red btn-sm" (click)="deleteCar(car)"  ><i class="fa fa-trash"></i></a>
+  </td>   
+    </tr>
+  </tbody> 
+</table>
+
