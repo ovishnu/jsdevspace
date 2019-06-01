@@ -26,6 +26,11 @@ import { CarService } from './service/car.service';
 import { ListCarComponent } from './cars/list-car/list-car.component';
 import { EditCarComponent } from './cars/edit-car/edit-car.component';
 import { AddCarComponent } from './cars/add-car/add-car.component';
+import { AddCustomerComponent } from './customers/add-customer/add-customer.component';
+import { CustomerDetailsComponent } from './customers/customer-details/customer-details.component';
+import { ShowCustomersComponent } from './customers/show-customers/show-customers.component';
+import { SearchCustomersComponent } from './customers/search-customers/search-customers.component';
+import { ElasticsearchService } from './service/elasticsearch.service';
 
 
 
@@ -41,6 +46,10 @@ import { AddCarComponent } from './cars/add-car/add-car.component';
     ListCarComponent,
     EditCarComponent,
     AddCarComponent,
+    AddCustomerComponent,
+    CustomerDetailsComponent,
+    ShowCustomersComponent,
+    SearchCustomersComponent
   ],
   imports: [
     AgmCoreModule.forRoot({
@@ -60,7 +69,7 @@ import { AddCarComponent } from './cars/add-car/add-car.component';
     HttpClientModule,
     MDBBootstrapModule.forRoot()
   ],
-  providers: [UserService, CarService],
+  providers: [UserService, CarService, ElasticsearchService],
   bootstrap: [AppComponent],
   schemas: [ NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA ]
 })

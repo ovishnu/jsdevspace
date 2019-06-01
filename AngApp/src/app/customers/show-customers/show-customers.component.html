@@ -1,0 +1,6 @@
+<div *ngFor="let customerSource of customerSources" style="margin-top:20px">
+  <customer-details [customer]='customerSource._source'></customer-details>
+</div>
+
+<h3>{{notice}}</h3>
+<button (click)="showNextPage()" *ngIf="haveNextPage" class="btn btn-primary">Next</button>

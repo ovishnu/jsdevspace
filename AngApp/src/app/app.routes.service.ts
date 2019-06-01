@@ -15,6 +15,9 @@ import { EditUserComponent } from './users/edit-user/edit-user.component';
 import { SampleComponent } from './sample/sample.component';
 import { ListCarComponent } from './cars/list-car/list-car.component';
 import { EditCarComponent } from './cars/edit-car/edit-car.component';
+import { AddCustomerComponent } from './customers/add-customer/add-customer.component';
+import { ShowCustomersComponent } from './customers/show-customers/show-customers.component';
+import { SearchCustomersComponent } from './customers/search-customers/search-customers.component';
 
 
 const routes: Route[] = [
@@ -37,9 +40,19 @@ const routes: Route[] = [
     path: 'users',
     children: [
       { path: 'list-user', component: ListUserComponent },
-      { path: 'edit-user', component: EditUserComponent }
+      { path: 'edit-user', component: EditUserComponent },
     ]
   },
+
+  {
+    path: 'customers',
+    children: [
+      { path: 'add', component: AddCustomerComponent },
+      { path: 'customers', component: ShowCustomersComponent },
+      { path: 'search', component: SearchCustomersComponent },
+    ]
+  },
+
 
   {
     path: 'cars',

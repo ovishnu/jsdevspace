@@ -1,0 +1,15 @@
+<div *ngIf="customer">
+  <div>
+    <label>Full Name: </label> {{customer.fullname}}
+  </div>
+  <div *ngIf="customer.age > 0">
+    <label>Age: </label> {{customer.age}}
+  </div>
+  <div>
+    <label>Address: </label> {{customer.address}}
+  </div>
+  <div *ngIf="customer.published?.length > 0">
+    <label>Published: </label> {{customer.published}}
+  </div>
+  <hr/>
+</div>

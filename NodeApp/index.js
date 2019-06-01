@@ -77,3 +77,11 @@ app.get("/api/v1/members", (req, res) => {
   
 });
 
+
+// decare a new route. This route serves a static HTML template called template2.html
+app.get('/v2', function(req, res){
+  res.sendFile('template2.html', {
+     root: path.join( __dirname, 'views' )
+   });
+})
+
